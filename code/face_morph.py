@@ -102,6 +102,7 @@ def generate_morph_sequence(duration,frame_rate,img1,img2,points1,points2,tri_li
             
         res = Image.fromarray(cv2.cvtColor(np.uint8(morphed_frame), cv2.COLOR_BGR2RGB))
         res.save(p.stdin,'JPEG')
+        res.save(f"{output}_frame_{j}.jpg",'JPEG')
 
     p.stdin.close()
     p.wait()

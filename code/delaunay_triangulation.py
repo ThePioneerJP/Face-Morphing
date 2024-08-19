@@ -48,8 +48,12 @@ def make_delaunay(f_w, f_h, theList, img1, img2):
     dictionary = {x[0]:x[1] for x in list(zip(points, range(76)))}
     
     # Insert points into subdiv
-    for p in points :
-        subdiv.insert(p)
+    for p in points:
+        if 0 <= p[0] < f_w and 0 <= p[1] < f_h:
+            subdiv.insert(p)
+            print(f"Point {p} is sucessfully inserted.")
+        else:
+            print(f"Point {p} is out of range and will not be inserted.")
 
     # Make a delaunay triangulation list.
     list4 = draw_delaunay(f_w, f_h, subdiv, dictionary)

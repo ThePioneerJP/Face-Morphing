@@ -97,6 +97,7 @@ def generate_face_correspondences(theImage1, theImage2):
         try:
             if len(dets) == 0:
                 raise NoFaceFound
+            print("Face found in the image.")
         except NoFaceFound:
             print("Sorry, but I couldn't find a face in the image.")
 
