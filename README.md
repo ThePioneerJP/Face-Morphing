@@ -33,7 +33,7 @@ Generate a morphing animation video sequence
 python3 code/__init__.py --img1 images/aligned_images/jennie.png --img2 images/aligned_images/rih.png --output output.mp4
 ```
 
-![Morphed Video](results/output.gif)
+See [the parent repo](https://github.com/Azmarie/Face-Morphing) for the results
 
 #### Test with your own images
 
@@ -51,13 +51,6 @@ Key Features
 2. Generate **corresponding features points** between the two images using Dlib's Facial Landmark Detection
 3. Calculate the **triangular mesh** with Delaunay Triangulation for each intermediate shape
 4. Warp the two input images towards the intermediate shape, perform **cross-dissolve** and obtain intermediate images each frame
-
-More Results
--------------
-![Morphed Video](results/final-club-final.gif)
-
-![Morphed Video](results/ld-final.gif)
-
 
 To Do
 -------------
